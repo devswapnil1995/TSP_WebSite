@@ -1,0 +1,40 @@
+.mainBody {
+  height: 300rem;
+  width: 100%;
+
+  header {
+    padding: 0;
+    margin: 0;
+    background-color: #BC8C40;
+    height: 3rem;
+    width: 100%;
+  }
+
+  .navbar {
+    height: 6rem;
+    width: 100%;
+  }
+
+  #banner {
+    height: 30rem;
+  }
+
+  #qualities {
+    height: 70rem;
+  }
+
+
+  #categories{
+    height: 70rem;
+  }
+
+  #products{
+    height: 70rem;
+  }
+
+  footer{
+    height: 7rem;
+    
+    background-color: antiquewhite;
+  }
+}
