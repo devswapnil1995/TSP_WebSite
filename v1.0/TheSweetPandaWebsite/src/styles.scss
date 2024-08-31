@@ -1,7 +1,6 @@
 /* style.css */
 
-@import url(
-'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root {
 	--color: #941d576a;
@@ -50,9 +49,12 @@ section {
 	padding: 3rem 9%;
 }
 
+.imgClass {
+	width: 12rem;
+}
+
 .heading {
-	background: url(
-"https://media.geeksforgeeks.org/wp-content/uploads/20240301113805/image11_100.png") no-repeat;
+	background: url("https://media.geeksforgeeks.org/wp-content/uploads/20240301113805/image11_100.png") no-repeat;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
@@ -102,8 +104,9 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 2rem 9%;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	padding: 0 10rem 0 10rem; //2rem 9%;
+	//box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	margin-top: 2rem;
 }
 
 .header .logo {
@@ -119,7 +122,7 @@ section {
 
 .header .navbar a {
 	font-size: 1.7rem;
-	color: #fff;
+	color: #222;
 	margin: 0 1rem;
 }
 
@@ -131,7 +134,7 @@ section {
 	font-size: 2.5rem;
 	margin-left: 1.7rem;
 	cursor: pointer;
-	color: #fff;
+	color: #222;
 }
 
 .header .icons div:hover {
@@ -158,8 +161,7 @@ section {
 
 .home {
 	padding-top: 14rem;
-	background: url(
-"https://media.geeksforgeeks.org/wp-content/uploads/20240301113805/image11_100.png") no-repeat;
+	background: url("https://media.geeksforgeeks.org/wp-content/uploads/20240301113805/image11_100.png") no-repeat;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -582,9 +584,10 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	//padding: 20px;
 	background-color: #941d576a;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	//box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background: white;
 }
 
 .logo {
@@ -654,4 +657,30 @@ section {
 	.hamburger {
 		display: flex;
 	}
+}
+
+/* For top bar to show offers */
+.sticky-container {
+	position: sticky;
+	top: 0;
+	background: #f0f0f0;
+	color: #000;
+	z-index: 1000;
+	height: 3rem;
+}
+.scrolling-text {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+	font-weight: bolder;
+}
+.scrolling-text span {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-100%); }
 }
