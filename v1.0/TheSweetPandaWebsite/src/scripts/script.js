@@ -1,4 +1,3 @@
-
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#menu-btn");
 const slides = document.querySelectorAll(".home .slides-container .slide");
