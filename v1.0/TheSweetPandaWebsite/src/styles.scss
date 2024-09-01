@@ -104,7 +104,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 10rem 0 10rem; //2rem 9%;
+	padding: 2rem 9%;
 	//box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 	margin-top: 3rem;
 }
@@ -596,7 +596,7 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	//padding: 20px;
+	padding: 20px;
 	background-color: #941d576a;
 	//box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	background: white;
@@ -779,9 +779,8 @@ section {
 
 
 .tab-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    display: block;
+    text-align: center;
 }
 
 .tab-button {
