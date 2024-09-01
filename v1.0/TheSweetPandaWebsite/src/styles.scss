@@ -17,7 +17,7 @@ body {
 	box-sizing: border-box;
 	outline: none;
 	border: none;
-	text-transform: capitalize;
+	//text-transform: capitalize;
 	text-decoration: none;
 	transition: .2s linear;
 }
@@ -332,6 +332,7 @@ section {
 	overflow: hidden;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
 	border: 0.1rem solid rgba(0, 0, 0, 0.7);
+	width: 30rem;
 }
 
 .products .box-container .box:hover .icons {
@@ -369,9 +370,9 @@ section {
 }
 
 .products .box-container .box .img {
-	height: 15rem;
-	width: 27rem;
-	overflow: hidden;
+	height: 30rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .products .box-container .box .img img {
@@ -381,7 +382,7 @@ section {
 }
 
 .products .box-container .box .content {
-	padding: 1.5rem;
+	padding: 0.1rem;
 }
 
 .products .box-container .box .content h3 {
@@ -392,7 +393,7 @@ section {
 .products .box-container .box .content .price {
 	font-size: 2rem;
 	color: #222;
-	padding: 1rem 0;
+	//padding: 1rem 0;
 }
 
 .products .box-container .box .content i {
@@ -774,4 +775,32 @@ section {
 	font-size: 20px;
 	letter-spacing: 2px;
 	color: #000;
+}
+
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-button {
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+	padding: 3px 11px;
+    margin: 10px 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #c49b5d; /* Gold-like color */
+    color: white;
+    font-weight: bold;
+}
+
+.tab-button:hover {
+    background-color: #f0f0f0; /* Light grey color */
 }

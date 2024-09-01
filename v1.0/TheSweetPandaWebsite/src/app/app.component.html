@@ -105,176 +105,46 @@
 
 
 <!-- Shop by category -->
-
-
 <section class="category" id="shop">
   <div class="separator-box">
     <hr class="line">
-    <span class="separator-text"> SHOP BY CATEGORY </span>
+    <span class="separator-text">{{categoryHeading}}</span>
     <hr class="line">
   </div>
-  
+
   <div class="box-container">
-    <a href="#" class="box">
-      <img decoding="async" src="assets/categories/cakes.png" alt="">
-      <h3>Cakes</h3>
-    </a>
-
-    <a href="#" class="box">
-      <img decoding="async" src="assets/categories/cheesecakes.png" alt="">
-      <h3>Cheesecakes</h3>
-    </a>
-
-    <a href="#" class="box">
-      <img decoding="async" src="assets/categories/doughnuts.png" alt="">
-      <h3>Doughnuts</h3>
-    </a>
-
-    <a href="#" class="box">
-      <img decoding="async" src="assets/categories/brownies.png" alt="">
-      <h3>Brownies</h3>
-    </a>
-
-    <a href="#" class="box">
-      <img decoding="async" src="assets/categories/cupcakes.png" alt="">
-      <h3>Cupcakes</h3>
+    <a href="#" class="box" *ngFor="let category of categories">
+      <img decoding="async" src="{{category.imgPath}}" alt="">
+      <h3>{{category.categoryName}}</h3>
     </a>
   </div>
 </section>
 <!-- Shop by category -->
 
 
-<section class="products" id="shop">
+<section class="products" id="shop" *ngIf="filterProductsList">
 
   <h1 class="title"> our <span>products</span> <a href="#">view all >></a> </h1>
+  <div class="tab-container">
+    <button class="tab-button {{category.categoryId == selectedCategoryId ? 'active':''}}"
+      *ngFor="let category of categories"
+      (click)="filterProducts(category.categoryId)">{{category.categoryName}}</button>
+  </div>
 
   <div class="box-container">
-
-    <div class="box">
+    <div class="box" *ngFor="let product of filterProductsList">
       <div class="icons">
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-eye"></a>
       </div>
       <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301114023/image_100.png"
+        <img decoding="async" src="{{product.imgPath}}"
           alt="">
       </div>
       <div class="content">
-        <h3>fruit cakes</h3>
-        <div class="price">₹250</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113939/image4_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>Donut</h3>
-        <div class="price">₹500</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301114023/image_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>Sparkel cake</h3>
-        <div class="price">₹150</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113914/image6_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>Nutella cake</h3>
-        <div class="price">₹120</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113939/image4_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>Choco Cup</h3>
-        <div class="price">₹70</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113818/image10_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>Cranberry Cake</h3>
-        <div class="price">₹200</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113805/image11_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>strawberry red spar cake</h3>
-        <div class="price">₹300</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="icons">
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-      <div class="img">
-        <img decoding="async" src="https://media.geeksforgeeks.org/wp-content/uploads/20240301113818/image10_100.png"
-          alt="">
-      </div>
-      <div class="content">
-        <h3>dark chocolate nutella cake</h3>
-        <div class="price">₹260</div>
+        <h3>{{product.productName}}</h3>
+        <div class="price">₹{{product.price}}</div>
       </div>
     </div>
   </div>
@@ -310,24 +180,14 @@
     <div class="box">
       <h3>Contact us</h3>
 
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i>The sweet panda, Opposite of Westside, Sarbahal, Jharsuguda Street, 36
-          P, Lane,
-          next to Hotel Royal India, Jharsuguda, Odisha 768201
-          , 10am-6pm</p>
+      <div class="contact-info" *ngIf="contactDetail">
+        <p><i class="fas fa-map-marker-alt"></i>{{contactDetail.address}}</p>
+        <p><i class="fas fa-envelope"></i> {{contactDetail.email}}</p>
+        <p><i class="fas fa-phone"></i> {{contactDetail.phone}}</p>
 
-        <p><i class="fas fa-envelope"></i> thesweetpanda@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +91-73268 58900</p>
         <div class="social-media">
-          <a href="#"><img src="assets/socialicons/facebook.png" alt="Facebook"></a>
-          <a target="_blank"
-            href="https://www.instagram.com/thesweet_panda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
-              src="assets/socialicons/instagram.png" alt="Instagram"></a>
-          <a target="_blank"
-            href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fmessage%2FT445ALFA2KTLL1&e=AT2FCbtTSpocuKFZUcxMK6aHpiLC1yD8E-rwJP1SGK7h0j4hlnQV3g-o8MiQlOOlEZ-reCKzMqXlW4vk0gN8Gq_VsYIH14-hfM8_qw"><img
-              src="assets/socialicons/youtube.png" alt="YouTube"></a>
-          <a target="_blank" href="https://wa.me/c/917326858900"><img src="assets/socialicons/whatsapp.png"
-              alt="whatsapp"></a>
+          <a *ngFor="let social of socialLinks" href="{{social.socialLinkUrl}}" target="_blank"><img
+              src="{{social.socialIcon}}" alt="{{social.socialName}}"></a>
         </div>
       </div>
 
